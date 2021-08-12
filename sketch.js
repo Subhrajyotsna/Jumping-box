@@ -33,10 +33,10 @@ function setup(){
 
 function draw() {
     background(rgb(255));
-    //create edgeSprite
-    edgeSprite = createSprite(475,700,950,20);
-    edgeSprite.visible = false;
-    box.bounceOff(edgeSprite);
+    
+    EdgeSprites = createSprite(475,700,950,20);
+    EdgeSprites.visible = false;
+    box.bounceOff(EdgeSprites);
 
     //add condition to check if box touching surface and make it box
     if(box.isTouching(surface1)){
@@ -59,6 +59,6 @@ function draw() {
         music.play();
         box.bounceOff(surface4);
     }
-
+createEdgeSprites();
     drawSprites();
 }
